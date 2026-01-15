@@ -600,6 +600,11 @@ function addShift(){
   state.shifts.push(shift);
   saveState().then(() => {
     setMessage(msg, "シフトを追加しました！", "ok");
+    //入力欄リセット
+    $("manualBreak").value = "";
+    $("transport").value = "";
+    $("isBusy").checked = false;
+    $("memo").value = "";
     renderAll();
   }).catch(() => setMessage(msg, "保存に失敗しました。", "error"));
 }
