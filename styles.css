@@ -127,7 +127,13 @@ details summary{
   flex-direction: row;
   align-items: center;
   gap: 10px;
+  white-space: nowrap;/*文字折り返し防止*/
 }
+
+.field.checkbox input{
+  flex-shrink: 0;/*チェックボックスが潰れない*/
+}
+
 .field.checkbox > span{
   font-size: 14px;
   color: var(--text);
